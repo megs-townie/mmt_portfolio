@@ -1,13 +1,15 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import { client, urlFor } from "../../client";
-import { images } from "../../constants";
+import { AppWrap } from "../../wrapper";
 import "./About.scss";
 
 const About = () => {
   const [abouts, setAbouts] = useState([]);
+
   useEffect(() => {
     const query = '*[_type == "abouts"]';
+
     client.fetch(query).then((data) => {
       setAbouts(data);
     });
@@ -16,7 +18,7 @@ const About = () => {
   return (
     <>
       <h2 className="head-text">
-        Because <span style={{ color: "#BF4E24" }}>Good Development</span>
+        Because <span style={{ color: "#BF4E24" }}>Good Development</span>{" "}
         <br />
         means <span style={{ color: "#BF4E24" }}>Good Business</span>
       </h2>
@@ -44,4 +46,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AppWrap(About, "about");

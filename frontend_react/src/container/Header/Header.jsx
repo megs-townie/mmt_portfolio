@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import React from "react";
-import { images } from "../../constants";
 
+import { images } from "../../constants";
+import { AppWrap } from "../../wrapper";
 import "./Header.scss";
 
 const scaleVariants = {
@@ -16,7 +17,7 @@ const scaleVariants = {
 };
 
 const Header = () => (
-  <div id="home" className="app__header app__flex">
+  <div className="app__header app__flex">
     <motion.div
       whileInView={{ x: [-100, 0], opacity: [0, 1] }}
       transition={{ duration: 0.5 }}
@@ -28,7 +29,7 @@ const Header = () => (
           <div style={{ marginLeft: 20 }}>
             <p className="p-text">Hey! I'm</p>
             <h1 className="head-text">Meagan</h1>
-            <p className="p-text"> -and that's Sadie </p>
+            <p className="p-text">and that's Sadie</p>
           </div>
         </div>
 
@@ -59,7 +60,7 @@ const Header = () => (
       whileInView={scaleVariants.whileInView}
       className="app__header-circles"
     >
-      {[images.java, images.html, images.sass].map((circle, index) => (
+      {[images.java, images.react, images.sass].map((circle, index) => (
         <div className="circle-cmp app__flex" key={`circle-${index}`}>
           <img src={circle} alt="profile_bg" />
         </div>
@@ -68,4 +69,4 @@ const Header = () => (
   </div>
 );
 
-export default Header;
+export default AppWrap(Header, "home");

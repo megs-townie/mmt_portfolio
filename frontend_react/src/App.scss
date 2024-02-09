@@ -106,8 +106,8 @@
   padding: 1rem;
 
   div {
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: var(--white-color);
     margin: 0.25rem 0;
@@ -122,7 +122,7 @@
     svg {
       width: 15px;
       height: 15px;
-      color: var(--lightOrange-color);
+      color: var(--orange-color);
     }
 
     &:hover {
@@ -160,13 +160,13 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #cbcbcb;
+    background-color: var(--lightOrange-color);
     margin: 0.5rem;
 
     transition: background-color 0.2s ease-in-out;
 
     &:hover {
-      background-color: var(--lightOrange-color);
+      background-color: var(--orange-color);
     }
 
     @media screen and (min-width: 2000px) {

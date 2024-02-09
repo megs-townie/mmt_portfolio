@@ -2,13 +2,14 @@
   position: relative;
   background: url("../../assets/bgIMG.png");
   background-size: cover;
-  background-repeat: repeat;
   background-position: center;
+  background-repeat: repeat;
 
+  // disable the default padding styles
   .app__wrapper {
     padding: 0;
 
-    .copywrite {
+    .copyright {
       display: none;
     }
   }
@@ -163,6 +164,7 @@
     }
   }
 }
+
 .app__header-img {
   flex: 1;
   height: 100%;
@@ -173,7 +175,7 @@
   position: relative;
 
   img {
-    width: 100%;
+    width: 90%;
     object-fit: contain;
     z-index: 1;
   }
@@ -185,7 +187,7 @@
     bottom: 0;
     z-index: 0;
     width: 100%;
-    height: 90%;
+    height: 100%;
   }
 
   @media screen and (max-width: 1200px) {
