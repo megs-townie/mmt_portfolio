@@ -25,6 +25,7 @@
     height: 170px;
     border-radius: 15px;
     object-fit: cover;
+    overflow-clip-margin: unset;
   }
 
   @media screen and (min-width: 2000px) {

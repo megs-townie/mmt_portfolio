@@ -1,16 +1,13 @@
-import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-
-import { AppWrap, MotionWrap } from "../../wrapper";
+import React, { useEffect, useState } from "react";
+import { client, urlFor } from "../../client";
+import { images } from "../../constants";
 import "./About.scss";
-import { urlFor, client } from "../../client";
 
 const About = () => {
   const [abouts, setAbouts] = useState([]);
-
   useEffect(() => {
     const query = '*[_type == "abouts"]';
-
     client.fetch(query).then((data) => {
       setAbouts(data);
     });
@@ -19,8 +16,9 @@ const About = () => {
   return (
     <>
       <h2 className="head-text">
-        I Know that <span>Good Design</span> <br />
-        means <span>Good Business</span>
+        Because <span style={{ color: "#BF4E24" }}>Good Development</span>
+        <br />
+        means <span style={{ color: "#BF4E24" }}>Good Business</span>
       </h2>
 
       <div className="app__profiles">
@@ -46,8 +44,4 @@ const About = () => {
   );
 };
 
-export default AppWrap(
-  MotionWrap(About, "app__about"),
-  "about",
-  "app__whitebg"
-);
+export default About;

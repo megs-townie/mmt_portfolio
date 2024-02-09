@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@sanity/client": "^6.12.4",
     "react-tooltip": "^5.26.0"
   }
 }
