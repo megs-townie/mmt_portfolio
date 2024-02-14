@@ -18,6 +18,8 @@ import redux from '../assets/redux.png';
 import sass from '../assets/sass.png';
 import typescript from '../assets/typescript.png';
 import vue from '../assets/vue.png';
+import godot from '../assets/godot.png';
+import kotlin from '../assets/kotlin.png';
 
 import about01 from '../assets/about01.png';
 import about02 from '../assets/about02.png';
@@ -49,6 +51,8 @@ export default {
   html,
   java,
   javascript,
+  godot,
+  kotlin,
   mu5,
   node,
   python,
